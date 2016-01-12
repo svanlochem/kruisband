@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Voorste Kruisband</string>
+
+    <!--Menu text-->
+    <string name="nav_intro">Introductie</string>
+    <string name="nav_gallery">Gallerij</string>
+    <string name="nav_movies">Filmpjes</string>
+
+
+    <!--Other-->
+    <string name="navigation_drawer_open">Open navigatie paneel</string>
+    <string name="navigation_drawer_close">Sluit navigatie paneel</string>
+
+    <string name="action_settings">Instellingen</string>
+
+    <!--Body text-->
+    <string name="introduction">
+        Hier komt een stuk text ter introductie van de app. Waarschijnlijk moet er nog een titel paneel boven komen maar dat zien we later wel.
+    </string>
+
+</resources>
