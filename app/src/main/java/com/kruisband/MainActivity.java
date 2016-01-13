@@ -1,11 +1,9 @@
 package com.kruisband;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.util.Log;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,10 +11,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebView;
+
+import com.kruisband.fragments.FaqFragment;
+import com.kruisband.fragments.HomeFragment;
+import com.kruisband.fragments.IllnessFragment;
+import com.kruisband.fragments.PostTreatmentFragment;
+import com.kruisband.fragments.TreatmentFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, IllnessFragment.OnIllnessFragmentInteractionListener, HomeFragment.OnHomeFragmentInteractionListener,
+        TreatmentFragment.OnTreatmentFragmentInteractionListener, PostTreatmentFragment.OnPostTreatmentFragmentInteractionListener ,FaqFragment.OnFaqFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,14 +48,12 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        //Initial page to be shown
+        displayView(R.id.nav_home);
+
         //Display of (justified) text
-        String text = "<html><body>"
-                         + "<p align=\"justify\">"
-                         + getString(R.string.introduction)
-                         + "</p> "
-                         + "</body></html>";
-        WebView webView = (WebView) findViewById(R.id.webView1);
-        webView.loadData(text, "text/html", "utf-8");
+//        WebView webView = (WebView) findViewById(R.id.webView1);
+//        webView.loadData(makeHTMLstring(getString(R.string.introduction)), "text/html", "utf-8");
     }
 
     @Override
@@ -89,23 +91,67 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
+        //Handle navigation clicks
+        displayView(item.getItemId());
+        return true;
+    }
 
-        if (id == R.id.nav_home) {
-            //Do nothing; we are already on the main text page (MainActivity)
-        } else if (id == R.id.nav_illness) {
-            //TODO: Create and start new activity for illness
-        } else if (id == R.id.nav_treatment) {
-            //TODO: Create and start new activity for treatment
-        } else if (id == R.id.nav_post_treatment) {
-            //TODO: Create and start new activity for post treatment
-        } else if (id == R.id.nav_faq) {
-            //TODO: Create and start new activity for FAQ
+    public void displayView(int viewId) {
+        Fragment fragment = null;
+        String title = getString(R.string.app_name);
+
+        switch (viewId) {
+            case R.id.nav_home:
+                fragment = new HomeFragment();
+                title = getString(R.string.nav_home);
+                break;
+            case R.id.nav_illness:
+                fragment = new IllnessFragment();
+                title  = getString(R.string.nav_illness);
+                break;
+            case R.id.nav_treatment:
+                fragment = new TreatmentFragment();
+                title  = getString(R.string.nav_treatment);
+                break;
+            case R.id.nav_post_treatment:
+                fragment = new PostTreatmentFragment();
+                title  = getString(R.string.nav_post_treatment);
+                break;
+            case R.id.nav_faq:
+                fragment = new FaqFragment();
+                title  = getString(R.string.nav_faq);
+                break;
+        }
+
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame, fragment);
+            ft.commit();
+        }
+
+        // set the toolbar title
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(title);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-        return true;
+    }
+
+    //Interaction with fragments
+    public void onIllnessFragmentInteraction(String text) {
+        //Interaction possibilities with fragment
+    }
+    public void onHomeFragmentInteraction(String text) {
+
+    }
+    public void onTreatmentFragmentInteraction(String text) {
+
+    }
+    public void onPostTreatmentFragmentInteraction(String text) {
+
+    }
+    public void onFaqFragmentInteraction(String text) {
+
     }
 }

@@ -22,5 +22,11 @@
     <string name="introduction">
         Hier komt een stuk text ter introductie van de app. Waarschijnlijk moet er nog een titel paneel boven komen maar dat zien we later wel.
     </string>
+    <string name="illness_intro">
+        Dit stuk text is de introductie van de aandoeningspagina. Hier komt een hoop text met plaatjes te staan.
+    </string>
+    <string name="treatment_intro">Behandeling tekst</string>
+    <string name="post_treatment_intro">Nabehandeling tekst</string>
+    <string name="faq_intro">Veel gestelde vragen tekst</string>
 
 </resources>
