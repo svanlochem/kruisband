@@ -17,10 +17,12 @@ import com.kruisband.fragments.HomeFragment;
 import com.kruisband.fragments.IllnessFragment;
 import com.kruisband.fragments.PostTreatmentFragment;
 import com.kruisband.fragments.TreatmentFragment;
+import com.kruisband.fragments.YoutubeFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, IllnessFragment.OnIllnessFragmentInteractionListener, HomeFragment.OnHomeFragmentInteractionListener,
-        TreatmentFragment.OnTreatmentFragmentInteractionListener, PostTreatmentFragment.OnPostTreatmentFragmentInteractionListener ,FaqFragment.OnFaqFragmentInteractionListener {
+        TreatmentFragment.OnTreatmentFragmentInteractionListener, PostTreatmentFragment.OnPostTreatmentFragmentInteractionListener,
+        FaqFragment.OnFaqFragmentInteractionListener, YoutubeFragment.OnYoutubeFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,6 +123,10 @@ public class MainActivity extends AppCompatActivity
                 fragment = new FaqFragment();
                 title  = getString(R.string.nav_faq);
                 break;
+            case R.id.nav_share:
+                fragment = new YoutubeFragment();
+                title = getString(R.string.nav_share);
+                break;
         }
 
         if (fragment != null) {
@@ -152,6 +158,9 @@ public class MainActivity extends AppCompatActivity
 
     }
     public void onFaqFragmentInteraction(String text) {
+
+    }
+    public void onYoutubeFragmentInteraction(String text) {
 
     }
 }

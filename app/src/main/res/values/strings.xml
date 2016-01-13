@@ -8,14 +8,13 @@
     <string name="nav_post_treatment">Nabehandeling</string>
     <string name="nav_faq">Veel Gestelde Vragen</string>
 
-    <string name="nav_share">Delen</string>
-    <string name="nav_about">Over Ons</string>
+    <string name="nav_share">Share</string>
+    <string name="nav_about">About</string>
 
     <!--Other-->
     <string name="navigation_drawer_open">Open navigatie paneel</string>
     <string name="navigation_drawer_close">Sluit navigatie paneel</string>
     <string name="navtitle_other">Overig</string>
-
     <string name="action_settings">Instellingen</string>
 
     <!--Body text-->
@@ -28,5 +27,10 @@
     <string name="treatment_intro">Behandeling tekst</string>
     <string name="post_treatment_intro">Nabehandeling tekst</string>
     <string name="faq_intro">Veel gestelde vragen tekst</string>
+
+    <!--Youtube-->
+    <string name="player_error">Error initializing YouTube player</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
 
 </resources>
