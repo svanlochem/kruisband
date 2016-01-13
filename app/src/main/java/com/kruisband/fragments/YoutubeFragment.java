@@ -19,8 +19,10 @@ import com.kruisband.R;
 public class YoutubeFragment extends Fragment {
     private static final String API_KEY = "AIzaSyD5HqGMVCERMXiJH6ujQPsuj9LyDn2tqrE";
 
+    private View rootView;
+
     //Define video to be played
-    private static String VIDEO_ID = "jdSvHKonex0";
+    private static String VID_ID = "HEeRZ_OE3mk";
 
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -57,31 +59,10 @@ public class YoutubeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         //Create rootview
-        View rootView = inflater.inflate(R.layout.fragment_youtube, container, false);
+        rootView = inflater.inflate(R.layout.fragment_youtube, container, false);
 
         //YOUTUBE
-        YouTubePlayerSupportFragment youTubePlayerFragment = YouTubePlayerSupportFragment.newInstance();
-        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-        transaction.add(R.id.youtube_layout, youTubePlayerFragment).commit();
-
-        youTubePlayerFragment.initialize(API_KEY, new YouTubePlayer.OnInitializedListener() {
-            @Override
-            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
-                if (!wasRestored) {
-                    player.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
-                    player.loadVideo(VIDEO_ID);
-                    player.play();
-                }
-            }
-
-            @Override
-            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult error) {
-                // YouTube error
-                String errorMessage = error.toString();
-                Toast.makeText(getActivity(), errorMessage, Toast.LENGTH_LONG).show();
-                Log.d("errorMessage:", errorMessage);
-            }
-        });
+        startVideo(VID_ID);
 
         // Inflate the layout for this fragment
         return rootView;
@@ -108,6 +89,36 @@ public class YoutubeFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    //Function to start a youtube video
+    private void startVideo(final String VIDEO_ID) {
+        YouTubePlayerSupportFragment youTubePlayerFragment = YouTubePlayerSupportFragment.newInstance();
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.add(R.id.youtube_layout, youTubePlayerFragment).commit();
+
+        youTubePlayerFragment.initialize(API_KEY, new YouTubePlayer.OnInitializedListener() {
+            @Override
+            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
+                if (!wasRestored) {
+                    player.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
+                    player.loadVideo(VIDEO_ID);
+                    //Show fullscreen in landscape and prevent app being rotated to landscape and
+                    player.addFullscreenControlFlag(player.FULLSCREEN_FLAG_CONTROL_ORIENTATION);
+                    //Fullscreen automatically activate on rotation to landscape
+//                    player.addFullscreenControlFlag(player.FULLSCREEN_FLAG_ALWAYS_FULLSCREEN_IN_LANDSCAPE);
+                    player.play();
+                }
+            }
+
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult error) {
+                // YouTube error
+                String errorMessage = error.toString();
+                Toast.makeText(getActivity(), errorMessage, Toast.LENGTH_LONG).show();
+                Log.d("errorMessage:", errorMessage);
+            }
+        });
     }
 
     public interface OnYoutubeFragmentInteractionListener {
