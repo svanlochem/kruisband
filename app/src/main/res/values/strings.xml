@@ -2,14 +2,19 @@
     <string name="app_name">Voorste Kruisband</string>
 
     <!--Menu text-->
-    <string name="nav_intro">Introductie</string>
-    <string name="nav_gallery">Gallerij</string>
-    <string name="nav_movies">Filmpjes</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_illness">Aandoening</string>
+    <string name="nav_treatment">Behandeling</string>
+    <string name="nav_post_treatment">Nabehandeling</string>
+    <string name="nav_faq">Veel Gestelde Vragen</string>
 
+    <string name="nav_share">Delen</string>
+    <string name="nav_about">Over Ons</string>
 
     <!--Other-->
     <string name="navigation_drawer_open">Open navigatie paneel</string>
     <string name="navigation_drawer_close">Sluit navigatie paneel</string>
+    <string name="navtitle_other">Overig</string>
 
     <string name="action_settings">Instellingen</string>
 

@@ -92,14 +92,16 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_text) {
+        if (id == R.id.nav_home) {
             //Do nothing; we are already on the main text page (MainActivity)
-        } else if (id == R.id.nav_gallery) {
-            //TODO: Create and start new activity for gallery
-        } else if (id == R.id.nav_movies) {
-            //TODO: Create and start new activity for movies
-        } else if (id == R.id.nav_share) {
-            //TODO: Create and start new activity for share
+        } else if (id == R.id.nav_illness) {
+            //TODO: Create and start new activity for illness
+        } else if (id == R.id.nav_treatment) {
+            //TODO: Create and start new activity for treatment
+        } else if (id == R.id.nav_post_treatment) {
+            //TODO: Create and start new activity for post treatment
+        } else if (id == R.id.nav_faq) {
+            //TODO: Create and start new activity for FAQ
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
