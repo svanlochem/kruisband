@@ -32,5 +32,7 @@
     <string name="player_error">Error initializing YouTube player</string>
     <string name="seek_to">Jump To</string>
     <string name="seek_to_hint">Seconds</string>
+    <string name="API_KEY">AIzaSyD5HqGMVCERMXiJH6ujQPsuj9LyDn2tqrE</string>
+    <string name="VIDEO_ID">HEeRZ_OE3mk</string> //Face to Call Home - John Mayer
 
 </resources>

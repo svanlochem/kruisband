@@ -17,12 +17,7 @@ import com.google.android.youtube.player.YouTubePlayerSupportFragment;
 import com.kruisband.R;
 
 public class YoutubeFragment extends Fragment {
-    private static final String API_KEY = "AIzaSyD5HqGMVCERMXiJH6ujQPsuj9LyDn2tqrE";
-
-    private View rootView;
-
-    //Define video to be played
-    private static String VID_ID = "HEeRZ_OE3mk";
+     private View rootView;
 
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -62,7 +57,7 @@ public class YoutubeFragment extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_youtube, container, false);
 
         //YOUTUBE
-        startVideo(VID_ID);
+        startVideo(getResources().getString(R.string.API_KEY),getResources().getString(R.string.VIDEO_ID));
 
         // Inflate the layout for this fragment
         return rootView;
@@ -92,7 +87,7 @@ public class YoutubeFragment extends Fragment {
     }
 
     //Function to start a youtube video
-    private void startVideo(final String VIDEO_ID) {
+    private void startVideo(String API_KEY, final String VIDEO_ID) {
         YouTubePlayerSupportFragment youTubePlayerFragment = YouTubePlayerSupportFragment.newInstance();
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.add(R.id.youtube_layout, youTubePlayerFragment).commit();
