@@ -68,8 +68,7 @@ public class HomeFragment extends Fragment {
 
         //Display of (justified) text
         WebView webView = (WebView) myInflatedView.findViewById(R.id.webView_home);
-        String text = HelperClass.makeHTMLstring(getResources().getString(R.string.introduction));
-        webView.loadData(text, "text/html", "utf-8");
+        webView.loadData(getResources().getString(R.string.introduction), "text/html", "utf-8");
 
         return myInflatedView;
     }

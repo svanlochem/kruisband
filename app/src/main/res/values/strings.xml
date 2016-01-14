@@ -19,7 +19,22 @@
 
     <!--Body text-->
     <string name="introduction">
-        Hier komt een stuk text ter introductie van de app. Waarschijnlijk moet er nog een titel paneel boven komen maar dat zien we later wel.
+        <![CDATA[
+            "<html><body>"
+                "<p align=\"center\" >"
+                    "<strong>WELKOM !</strong>"
+                "</p>"
+                "<p align=\"justify\">"
+                    "<strong>Allereerst bedankt voor de interesse en het downloaden van de voorste kruisband app!</strong>"
+                "</p>"
+                "<p align=\"justify\">"
+                    "Deze app geeft informatie voor pati&#235;nten, (para)medici en andere ge&#239;nteresseerden over de voorste kruisband ruptuur. Er wordt uitleg gegeven middels tekst en beeldmateriaal over de aandoening, de behandeling en de nabehandeling."
+                "</p>"
+                "<p align=\"center\">"
+                    "Check snel onze filmpjes!"
+                "</p>"
+            "</body></html>"
+        ]]>
     </string>
     <string name="illness_intro">
         Dit stuk text is de introductie van de aandoeningspagina. Hier komt een hoop text met plaatjes te staan.
