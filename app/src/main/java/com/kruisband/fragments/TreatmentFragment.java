@@ -44,7 +44,7 @@ public class TreatmentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View myInflatedView = inflater.inflate(R.layout.fragment_treatment, container, false);
+        View myInflatedView = inflater.inflate(R.layout.fragment_text, container, false);
         return myInflatedView;
     }
 }

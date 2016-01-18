@@ -96,9 +96,9 @@ public class IllnessFragment extends Fragment {
                 case 1:
                     return new IllnessCausesFragment();
                 case 2:
-                    return new IllnessCausesFragment();
+                    return new IllnessSymptomsFragment();
                 case 3:
-                    return new IllnessCausesFragment();
+                    return new IllnessDiagnosisFragment();
                 default:
                     return null;
             }

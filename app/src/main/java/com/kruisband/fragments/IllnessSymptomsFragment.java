@@ -9,7 +9,7 @@ import android.webkit.WebView;
 
 import com.kruisband.R;
 
-public class IllnessAnatomyFragment extends Fragment {
+public class IllnessSymptomsFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -17,14 +17,13 @@ public class IllnessAnatomyFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private static String TEXT = "";
 
-    public IllnessAnatomyFragment() {
+    public IllnessSymptomsFragment() {
         // Required empty public constructor
     }
 
-    public static IllnessAnatomyFragment newInstance(String param1, String param2) {
-        IllnessAnatomyFragment fragment = new IllnessAnatomyFragment();
+    public static IllnessSymptomsFragment newInstance(String param1, String param2) {
+        IllnessSymptomsFragment fragment = new IllnessSymptomsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -48,7 +47,7 @@ public class IllnessAnatomyFragment extends Fragment {
 
         //Display of text
         WebView webView = (WebView) myInflatedView.findViewById(R.id.webView_text);
-        webView.loadData(getResources().getString(R.string.illness_anatomy), "text/html", "utf-8");
+        webView.loadData(getResources().getString(R.string.illness_symptoms), "text/html", "utf-8");
 
         // Inflate the layout for this fragment
         return myInflatedView;

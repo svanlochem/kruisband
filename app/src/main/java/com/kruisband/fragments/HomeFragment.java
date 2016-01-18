@@ -1,7 +1,5 @@
 package com.kruisband.fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
-import com.kruisband.HelperClass;
 import com.kruisband.R;
 
 public class HomeFragment extends Fragment {
@@ -24,14 +21,6 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
@@ -54,10 +43,10 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View myInflatedView = inflater.inflate(R.layout.fragment_home, container, false);
+        View myInflatedView = inflater.inflate(R.layout.fragment_text, container, false);
 
         //Display of text
-        WebView webView = (WebView) myInflatedView.findViewById(R.id.webView_home);
+        WebView webView = (WebView) myInflatedView.findViewById(R.id.webView_text);
         webView.loadData(getResources().getString(R.string.introduction), "text/html", "utf-8");
 
         return myInflatedView;

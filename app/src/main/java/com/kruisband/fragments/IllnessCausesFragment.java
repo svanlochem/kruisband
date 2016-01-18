@@ -1,6 +1,5 @@
 package com.kruisband.fragments;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -44,14 +43,13 @@ public class IllnessCausesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View myInflatedView = inflater.inflate(R.layout.fragment_illness_causes, container, false);
+        View myInflatedView = inflater.inflate(R.layout.fragment_text, container, false);
 
         //Display of text
-        WebView webView = (WebView) myInflatedView.findViewById(R.id.webView_illness_causes);
+        WebView webView = (WebView) myInflatedView.findViewById(R.id.webView_text);
         webView.loadData(getResources().getString(R.string.illness_causes), "text/html", "utf-8");
 
         // Inflate the layout for this fragment
         return myInflatedView;
     }
-
 }
