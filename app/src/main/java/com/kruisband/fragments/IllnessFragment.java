@@ -1,14 +1,15 @@
 package com.kruisband.fragments;
 
-import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 
-import com.kruisband.HelperClass;
 import com.kruisband.R;
 
 public class IllnessFragment extends Fragment {
@@ -19,17 +20,11 @@ public class IllnessFragment extends Fragment {
     private String mText1;
     private String mText2;
 
-    private OnIllnessFragmentInteractionListener mListener;
 
     public IllnessFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     */
     public static IllnessFragment newInstance(String param1, String param2) {
         IllnessFragment fragment = new IllnessFragment();
         Bundle args = new Bundle();
@@ -54,48 +49,65 @@ public class IllnessFragment extends Fragment {
         // Inflate the layout for this fragment
         View myInflatedView = inflater.inflate(R.layout.fragment_illness, container, false);
 
-        //Display of (justified) text
-        WebView webView = (WebView) myInflatedView.findViewById(R.id.webView_illness);
-        String text = HelperClass.makeHTMLstring(getResources().getString(R.string.illness_intro));
-        webView.loadData(text, "text/html", "utf-8");
+        TabLayout tabLayout = (TabLayout) myInflatedView.findViewById(R.id.tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab_illness_anatomy)));
+        tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab_illness_causes)));
+        tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab_illness_symptoms)));
+        tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab_illness_diagnosis)));
+
+        final ViewPager viewPager = (ViewPager) myInflatedView.findViewById(R.id.viewpager);
+
+        viewPager.setAdapter(new PagerAdapter
+                (getFragmentManager(), tabLayout.getTabCount()));
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         return myInflatedView;
     }
 
-    public void onButtonPressed(String text) {
-        if (mListener != null) {
-            mListener.onIllnessFragmentInteraction(text);
+    public class PagerAdapter extends FragmentStatePagerAdapter {
+        int mNumOfTabs;
+
+        public PagerAdapter(FragmentManager fm, int NumOfTabs) {
+            super(fm);
+            this.mNumOfTabs = NumOfTabs;
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return new IllnessAnatomyFragment();
+                case 1:
+                    return new IllnessCausesFragment();
+                case 2:
+                    return new IllnessCausesFragment();
+                case 3:
+                    return new IllnessCausesFragment();
+                default:
+                    return null;
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return mNumOfTabs;
         }
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnIllnessFragmentInteractionListener) {
-            mListener = (OnIllnessFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnIllnessFragmentInteractionListener {
-        void onIllnessFragmentInteraction(String text);
-    }
 }

@@ -26,8 +26,6 @@ public class YoutubeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private OnYoutubeFragmentInteractionListener mListener;
-
     public YoutubeFragment() {
         // Required empty public constructor
     }
@@ -63,29 +61,6 @@ public class YoutubeFragment extends Fragment {
         return rootView;
     }
 
-    public void onButtonPressed(String text) {
-        if (mListener != null) {
-            mListener.onYoutubeFragmentInteraction(text);
-        }
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnYoutubeFragmentInteractionListener) {
-            mListener = (OnYoutubeFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
     //Function to start a youtube video
     private void startVideo(String API_KEY, final String VIDEO_ID) {
         YouTubePlayerSupportFragment youTubePlayerFragment = YouTubePlayerSupportFragment.newInstance();
@@ -114,9 +89,5 @@ public class YoutubeFragment extends Fragment {
                 Log.d("errorMessage:", errorMessage);
             }
         });
-    }
-
-    public interface OnYoutubeFragmentInteractionListener {
-        void onYoutubeFragmentInteraction(String text);
     }
 }

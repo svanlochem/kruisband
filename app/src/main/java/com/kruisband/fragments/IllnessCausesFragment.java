@@ -1,16 +1,16 @@
 package com.kruisband.fragments;
 
-import android.content.Context;
-import android.net.Uri;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 
 import com.kruisband.R;
 
-public class PostTreatmentFragment extends Fragment {
+public class IllnessCausesFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -18,12 +18,13 @@ public class PostTreatmentFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public PostTreatmentFragment() {
+
+    public IllnessCausesFragment() {
         // Required empty public constructor
     }
 
-    public static PostTreatmentFragment newInstance(String param1, String param2) {
-        PostTreatmentFragment fragment = new PostTreatmentFragment();
+    public static IllnessCausesFragment newInstance(String param1, String param2) {
+        IllnessCausesFragment fragment = new IllnessCausesFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -43,8 +44,14 @@ public class PostTreatmentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View myInflatedView = inflater.inflate(R.layout.fragment_illness_causes, container, false);
+
+        //Display of text
+        WebView webView = (WebView) myInflatedView.findViewById(R.id.webView_illness_causes);
+        webView.loadData(getResources().getString(R.string.illness_causes), "text/html", "utf-8");
+
         // Inflate the layout for this fragment
-        View myInflatedView =inflater.inflate(R.layout.fragment_post_treatment, container, false);
         return myInflatedView;
     }
+
 }

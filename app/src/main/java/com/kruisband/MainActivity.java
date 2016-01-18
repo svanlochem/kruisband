@@ -19,10 +19,7 @@ import com.kruisband.fragments.PostTreatmentFragment;
 import com.kruisband.fragments.TreatmentFragment;
 import com.kruisband.fragments.YoutubeFragment;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, IllnessFragment.OnIllnessFragmentInteractionListener, HomeFragment.OnHomeFragmentInteractionListener,
-        TreatmentFragment.OnTreatmentFragmentInteractionListener, PostTreatmentFragment.OnPostTreatmentFragmentInteractionListener,
-        FaqFragment.OnFaqFragmentInteractionListener, YoutubeFragment.OnYoutubeFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,16 +27,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        //Action button
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -52,10 +39,6 @@ public class MainActivity extends AppCompatActivity
 
         //Initial page to be shown
         displayView(R.id.nav_home);
-
-        //Display of (justified) text
-//        WebView webView = (WebView) findViewById(R.id.webView1);
-//        webView.loadData(makeHTMLstring(getString(R.string.introduction)), "text/html", "utf-8");
     }
 
     @Override
@@ -142,25 +125,5 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-    }
-
-    //Interaction with fragments
-    public void onIllnessFragmentInteraction(String text) {
-        //Interaction possibilities with fragment
-    }
-    public void onHomeFragmentInteraction(String text) {
-
-    }
-    public void onTreatmentFragmentInteraction(String text) {
-
-    }
-    public void onPostTreatmentFragmentInteraction(String text) {
-
-    }
-    public void onFaqFragmentInteraction(String text) {
-
-    }
-    public void onYoutubeFragmentInteraction(String text) {
-
     }
 }
