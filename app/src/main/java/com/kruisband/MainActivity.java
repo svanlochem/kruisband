@@ -16,6 +16,8 @@ import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.kruisband.fragments.FaqFragment;
 import com.kruisband.fragments.HomeFragment;
 import com.kruisband.fragments.IllnessFragment;
@@ -45,6 +47,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //Initial page to be shown
         displayView(R.id.nav_home);
+
+        //Load ads
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(getResources().getString(R.string.test_device_id))
+                .build();
+        mAdView.loadAd(adRequest);
     }
 
     @Override

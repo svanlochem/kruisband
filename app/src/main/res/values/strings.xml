@@ -78,4 +78,8 @@
     <string name="API_KEY">AIzaSyD5HqGMVCERMXiJH6ujQPsuj9LyDn2tqrE</string>
     <string name="VIDEO_ID">HEeRZ_OE3mk</string>
 
+    <!--Ads-->
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="test_device_id">F669D25FC9FBADF2BEBF85061E7DDC9D</string>
+
 </resources>
