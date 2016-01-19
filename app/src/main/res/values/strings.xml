@@ -8,7 +8,7 @@
     <string name="nav_post_treatment">Nabehandeling</string>
     <string name="nav_faq">Veel Gestelde Vragen</string>
 
-    <string name="nav_share">Share</string>
+    <string name="nav_share">Delen</string>
     <string name="nav_about">About</string>
 
     <!--Other-->
@@ -18,7 +18,7 @@
     <string name="action_settings">Instellingen</string>
 
     <!--Tabs-->
-    <string name="tab_illness_anatomy">Anatomie en Functie</string>
+    <string name="tab_illness_anatomy"><![CDATA[Anatomie & Functie]]></string>
     <string name="tab_illness_causes">Oorzaken</string>
     <string name="tab_illness_symptoms">Symptomen</string>
     <string name="tab_illness_diagnosis">Diagnose</string>
