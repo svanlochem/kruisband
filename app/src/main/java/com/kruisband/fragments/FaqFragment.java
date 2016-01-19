@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 
 import com.kruisband.R;
 
@@ -43,8 +44,11 @@ public class FaqFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View myInflatedView = inflater.inflate(R.layout.fragment_faq, container, false);
+        View myInflatedView = inflater.inflate(R.layout.fragment_text, container, false);
+
+        WebView webView = (WebView) myInflatedView.findViewById(R.id.webView_text);
+        webView.loadData(getResources().getString(R.string.faq), "text/html", "utf-8");
+
         return myInflatedView;
     }
 }

@@ -50,7 +50,7 @@
     </string>
     <string name="illness_symptoms">
         <![CDATA[
-            <p align=\"justify\">Het afscheuren van de voorste kruisband geeft een aantal symptomen. Vaak wordt een <u>knap of scheurend geluid </u>gehoord. Vaak ontstaat er binnen enkele uren <u>zwelling</u> van de knie door bloeding uit de bloedvaten uit de kruisband (haemartros). Ook kan <u>instabiliteit van de knie</u> ontstaan tijdens het sporten of tijdens alledaagse activiteiten wat kan leiden tot verzwikking van de knie. Dat kan vervolgens begeleidende schade van de meniscus en kraakbeen veroorzaken.</p>
+            <p align=\"justify\">Het afscheuren van de voorste kruisband geeft een aantal symptomen. Vaak wordt een <u>knap of scheurend geluid</u> gehoord. Vaak ontstaat er binnen enkele uren <u>zwelling</u> van de knie door bloeding uit de bloedvaten uit de kruisband (haemartros). Ook kan <u>instabiliteit van de knie</u> ontstaan tijdens het sporten of tijdens alledaagse activiteiten wat kan leiden tot verzwikking van de knie. Dat kan vervolgens begeleidende schade van de meniscus en kraakbeen veroorzaken.</p>
             <p align=\"center\"><u>Pijn is geen specifiek kenmerk</u> van kruisbandletsel. Dit past meer bij meniscus-, kraakbeenletsel of een botkneuzing.</p>
         ]]>
     </string>
@@ -64,6 +64,16 @@
             <p align=\"justify\">Naast het lichamelijk onderzoek worden er ook vaak r&ouml;ntgenfoto&apos;s gemaakt van de knie. Op de r&ouml;ntgenfoto&apos;s kan worden gezien of er een breuk en eventueel kraakbeenslijtage aanwezig is. Door het afscheuren van de kruisband kan ook een stukje bot waar de pees aan vast zit afscheuren (avulsie fractuur). Soms kan aan de buitenvoorzijde net onder de gewrichtspleet een breuk aanwezig zijn (segond fractuur).</p>
             <p align=\"justify\">Op basis van deze testen is door een ervaren onderzoeker de diagnose met grote waarschijnlijkheid te stellen. Een MRI is hier noodzakelijk voor nodig! Indien er aanwijzingen zijn voor letsel van de meniscus, overige kniebanden of het kraakbeen kan een MRI worden aangevraagd.</p>
             <p align=\"justify\">Indien er onduidelijkheid bestaat over de diagnose kan in uitzonderlijke situaties een arthroscopie(kijkoperatie) worden verricht.</p>
+        ]]>
+    </string>
+
+    <string name="faq">
+        <![CDATA[
+            <p align=\"justify\"><b>Is het nodig een MRI scan te laten maken om de diagnose van een gescheurde voorste kruisband te stellen?</b></p>
+            <p align=\"justify\">Het verrichten van een MRI scan om de diagnose te bevestigen is lang niet altijd noodzakelijk. Een MRI scan is met name bedoeld om aanvullende letsels op te sporen, indien daar aanwijzingen voor zijn. Ook wordt een MRI scan gemaakt als de diagnose voorste kruisband ruptuur niet geheel zeker is, maar hiervoor wel aanwijzingen bestaan.</p>
+            <hr>
+            <p align=\"justify\"><b>Geneest een gescheurde voorste kruisband vanzelf?</b></p>
+            <p align=\"justify\">In tegenstelling tot bijvoorbeeld de binnenste knieband (het mediale collaterale ligament) geneest een volledig afgescheurde voorste kruisband niet vanzelf. Een operatie voor een gescheurde voorste kruisband bestaat daarom uit het vervangen van de voorste kruisband: een voorste kruisband reconstructie. Een incompleet gescheurde voorste kruisband kan wel (deels) herstellen. Soms geeft de rest van de incompleet gescheurde voorste kruisband nog voldoende stabiliteit.</p>
         ]]>
     </string>
 
