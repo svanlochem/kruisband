@@ -47,8 +47,7 @@ public class IllnessSymptomsFragment extends Fragment {
 
         //Display of text
         WebView webView = (WebView) myInflatedView.findViewById(R.id.webView_text);
-        webView.loadUrl("file:///android_asset/illness_symptoms.html");
-//        webView.loadData(getResources().getString(R.string.illness_symptoms), "text/html", "utf-8");
+        webView.loadUrl(getResources().getString(R.string.ref_assets) + getResources().getString(R.string.ref_illness_symptoms));
 
         // Inflate the layout for this fragment
         return myInflatedView;

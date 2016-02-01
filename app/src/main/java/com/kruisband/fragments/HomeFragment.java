@@ -47,7 +47,7 @@ public class HomeFragment extends Fragment {
 
         //Display of text
         WebView webView = (WebView) myInflatedView.findViewById(R.id.webView_text);
-        webView.loadData(getResources().getString(R.string.introduction), "text/html", "utf-8");
+        webView.loadUrl(getResources().getString(R.string.ref_assets) + getResources().getString(R.string.ref_introduction));
 
         return myInflatedView;
     }
