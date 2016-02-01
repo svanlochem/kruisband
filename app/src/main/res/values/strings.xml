@@ -51,6 +51,7 @@
     <string name="illness_symptoms">
         <![CDATA[
             <p align=\"justify\">Het afscheuren van de voorste kruisband geeft een aantal symptomen. Vaak wordt een <u>knap of scheurend geluid</u> gehoord. Vaak ontstaat er binnen enkele uren <u>zwelling</u> van de knie door bloeding uit de bloedvaten uit de kruisband (haemartros). Ook kan <u>instabiliteit van de knie</u> ontstaan tijdens het sporten of tijdens alledaagse activiteiten wat kan leiden tot verzwikking van de knie. Dat kan vervolgens begeleidende schade van de meniscus en kraakbeen veroorzaken.</p>
+            <img src=\"file:///android_asset/test_pic.jpg\">
             <p align=\"center\"><u>Pijn is geen specifiek kenmerk</u> van kruisbandletsel. Dit past meer bij meniscus-, kraakbeenletsel of een botkneuzing.</p>
         ]]>
     </string>
