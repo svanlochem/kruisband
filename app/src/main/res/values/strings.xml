@@ -28,12 +28,15 @@
         Dit stuk text is de introductie van de aandoeningspagina. Hier komt een hoop text met plaatjes te staan.
     </string>
 
-    <string name="faq">
+    <string name="faq_q1">Is het nodig een MRI scan te laten maken om de diagnose van een gescheurde voorste kruisband te stellen?</string>
+    <string name="faq_a1">
         <![CDATA[
-            <p align=\"justify\"><b>Is het nodig een MRI scan te laten maken om de diagnose van een gescheurde voorste kruisband te stellen?</b></p>
             <p align=\"justify\">Het verrichten van een MRI scan om de diagnose te bevestigen is lang niet altijd noodzakelijk. Een MRI scan is met name bedoeld om aanvullende letsels op te sporen, indien daar aanwijzingen voor zijn. Ook wordt een MRI scan gemaakt als de diagnose voorste kruisband ruptuur niet geheel zeker is, maar hiervoor wel aanwijzingen bestaan.</p>
-            <hr>
-            <p align=\"justify\"><b>Geneest een gescheurde voorste kruisband vanzelf?</b></p>
+        ]]>
+    </string>
+    <string name="faq_q2">Geneest een gescheurde voorste kruisband vanzelf?</string>
+    <string name="faq_a2">
+        <![CDATA[
             <p align=\"justify\">In tegenstelling tot bijvoorbeeld de binnenste knieband (het mediale collaterale ligament) geneest een volledig afgescheurde voorste kruisband niet vanzelf. Een operatie voor een gescheurde voorste kruisband bestaat daarom uit het vervangen van de voorste kruisband: een voorste kruisband reconstructie. Een incompleet gescheurde voorste kruisband kan wel (deels) herstellen. Soms geeft de rest van de incompleet gescheurde voorste kruisband nog voldoende stabiliteit.</p>
         ]]>
     </string>
