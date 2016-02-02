@@ -26,6 +26,8 @@ public class FaqFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    View rootView;
+
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
@@ -56,10 +58,10 @@ public class FaqFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View myInflatedView = inflater.inflate(R.layout.fragment_faq, container, false);
+        rootView = inflater.inflate(R.layout.fragment_faq, container, false);
 
         // get the listview
-        expListView = (ExpandableListView) myInflatedView.findViewById(R.id.expListView);
+        expListView = (ExpandableListView) rootView.findViewById(R.id.expListView);
 
 //      Tutorial ExpandableListView  http://www.androidhive.info/2013/07/android-expandable-list-view-tutorial/
         // preparing list data
@@ -91,7 +93,9 @@ public class FaqFragment extends Fragment {
 
             @Override
             public void onGroupCollapse(int groupPosition) {
-
+                //Clear the webview
+                WebView webView = (WebView) rootView.findViewById(R.id.lblListItem);
+                webView.loadUrl("about:blank");
             }
         });
 
@@ -105,7 +109,7 @@ public class FaqFragment extends Fragment {
             }
         });
 
-        return myInflatedView;
+        return rootView;
     }
 
     /*

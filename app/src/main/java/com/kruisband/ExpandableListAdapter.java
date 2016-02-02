@@ -49,8 +49,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(R.layout.list_item, null);
         }
 
-        WebView webView = (WebView) convertView
-                .findViewById(R.id.lblListItem);
+        WebView webView = (WebView) convertView.findViewById(R.id.lblListItem);
 
         webView.loadData(childText, "text/html", "utf-8");
         return convertView;
