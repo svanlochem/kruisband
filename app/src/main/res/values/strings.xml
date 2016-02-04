@@ -40,6 +40,54 @@
             <p align=\"justify\">In tegenstelling tot bijvoorbeeld de binnenste knieband (het mediale collaterale ligament) geneest een volledig afgescheurde voorste kruisband niet vanzelf. Een operatie voor een gescheurde voorste kruisband bestaat daarom uit het vervangen van de voorste kruisband: een voorste kruisband reconstructie. Een incompleet gescheurde voorste kruisband kan wel (deels) herstellen. Soms geeft de rest van de incompleet gescheurde voorste kruisband nog voldoende stabiliteit.</p>
         ]]>
     </string>
+    <string name="faq_q3">Moet er altijd een voorste kruisband reconstructie worden verricht bij een voorste kruisband ruptuur?</string>
+    <string name="faq_a3">
+        <![CDATA[
+            <p align=\"justify\">Niet iedereen met een gescheurde voorste kruisband hoeft te worden geopereerd. Een deel van de pati&#235;nten zal door het verminderen van hun (sportieve) activiteiten niveau de belasting op de knie aanpassen aan de verminderde belastbaarheid van de knie. Echter dit betreft vaak de oudere pati&#235;nten met een lager (sportief) activiteiten niveau.</p>
+        ]]>
+    </string>
+    <string name="faq_q4">Waarom wordt een voorste kruisband reconstructie verricht?</string>
+    <string name="faq_a4">
+        <![CDATA[
+            <p align=\"justify\">Een voorste kruisband reconstructie wordt verricht om aanwezige klachten van instabiliteit op te heffen, en/of het optreden van aanvullend letsel van het kraakbeen of de meniscus in de toekomst (door nieuwe &#8220;verzwikkingen&#8221;) zoveel mogelijk te voorkomen.</p>
+        ]]>
+    </string>
+    <string name="faq_q5">Wat is de beste timing van de operatie?</string>
+    <string name="faq_a5">
+        <![CDATA[
+            <p align=\"justify\">De timing van een voorste kruisband reconstructie na een acuut letsel van de knie is van groot belang voor het eindresultaat. Voordat een voorste kruisband reconstructie kan worden verricht moet de knie eerst &#8220;afgekoeld&#8221; zijn: er dient een goede bewegingsvrijheid te zijn en de knie moet volledig kunnen strekken; daarnaast dient de zwelling van de knie nagenoeg helemaal verdwenen te zijn. De spierkracht van het bovenbeen dient goed te zijn hersteld. Over het algemeen duurt dit ongeveer vier tot zes weken vanaf het letsel. Indien de knie aan deze voorwaarden voldoet, dan wordt de operatie op korte termijn uitgevoerd. Indien de operatie te snel wordt uitgevoerd terwijl de knie nog niet aan deze voorwaarden voldoet, bestaat er een kans dat de knie stijf wordt en de revalidatie veel langer duurt. Daarnaast wordt het uiteindelijke eindresultaat hierdoor nadelig be&#207nvloedt.</p>
+        ]]>
+    </string>
+    <string name="faq_q6">Wat is het beste transplantaat voor een voorste kruisband reconstructie?</string>
+    <string name="faq_a6">
+        <![CDATA[
+            <p align=\"justify\">Op de vraag welk transplantaat en welke fixatie methode de beste keuze is bestaat geen eenduidig antwoord. Het hangt van vele technische- en omgevingsfactoren af. Ook de ervaring van de orthopedisch chirurg met bepaalde operatietechnieken, en het type revalidatie en de inzet bij de revalidatie, is van invloed op het eind resultaat. Hamstrings pezen versus de knieschijfpees Dit zijn de twee meest gebruikte type lichaamseigen pezen voor een voorste kruisband reconstructie. Beide opties hebben voor- en nadelen. In het eindresultaat zit geen verschil tussen beiden. Bij gebruikt van de knieschijfpees is de kans op pijnklachten rondom de knieschijf echter duidelijk groter dan bij gebruik van de hamstrings pezen.</p>
+        ]]>
+    </string>
+    <string name="faq_q7">Bij wie moet ik revalideren?</string>
+    <string name="faq_a7">
+        <![CDATA[
+            <p align=\"justify\">De revalidatie na een voorste kruisband reconstructie vindt plaats onder begeleiding van uw eigen fysiotherapeut. Wij adviseren u hiervoor gebruik te maken van een fysiotherapeut die gespecialiseerd is in de revalidatie na een voorste kruisband reconstructie. Maak voor de operatie alvast de afspraak.</p>
+        ]]>
+    </string>
+    <string name="faq_q8">Heb ik na de operatie een brace nodig tijdens de revalidatie?</string>
+    <string name="faq_a8">
+        <![CDATA[
+            <p align=\"justify\">Het is niet nodig een brace te dragen tijdens de revalidatie na een voorste kruisband reconstructie. Alleen bij bepaalde aanvullende letsels, of wanneer er naast de voorste kruisband reconstructie nog een andere operatieve behandeling is verricht kan een brace tijdens de revalidatie nodig zijn.</p>
+        ]]>
+    </string>
+    <string name="faq_q9">Wanneer mag ik weer autorijden?</string>
+    <string name="faq_a9">
+        <![CDATA[
+            <p align=\"justify\">Hiervoor bestaat geen duidelijke juridische richtlijn. Omdat u de eerste weken met twee krukken moet lopen, lijkt het voor de hand te liggen om op zijn vroegst pas nadien weer te gaan auto rijden. Indien u over een auto met een automatische versnellingsbak beschikt, en u aan de linker knie wordt geopereerd, zou u eerder auto kunnen rijden. Over het algemeen geldt voor het deelnemen aan het verkeer dat de verkeersdeelnemer daartoe goed in staat moet zijn.</p>
+        ]]>
+    </string>
+    <string name="faq_q10">Wanneer kan ik weer aan het werk?</string>
+    <string name="faq_a10">
+        <![CDATA[
+            <p align=\"justify\">Dat hangt af van uw beroep en uw werkzaamheden. Er wordt aanbevolen de eerste 3 maanden na de operatie geen zware fysieke activiteiten, met voor de knie belastend werk, en/of risicovolle activiteiten te verrichten.</p>
+        ]]>
+    </string>
 
     <!--HTML REFRENCES-->
     <string name="ref_assets">file:///android_asset/</string>

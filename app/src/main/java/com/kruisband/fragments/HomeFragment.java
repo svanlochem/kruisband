@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.kruisband.R;
@@ -47,6 +48,9 @@ public class HomeFragment extends Fragment {
 
         //Display of text
         WebView webView = (WebView) myInflatedView.findViewById(R.id.webView_text);
+//        WebSettings settings = webView.getSettings();
+//        settings.setUseWideViewPort(true);
+//        settings.setLoadWithOverviewMode(true);
         webView.loadUrl(getResources().getString(R.string.ref_assets) + getResources().getString(R.string.ref_introduction));
 
         return myInflatedView;

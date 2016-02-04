@@ -122,16 +122,47 @@ public class FaqFragment extends Fragment {
         // Adding child data
         listDataHeader.add(getResources().getString(R.string.faq_q1));
         listDataHeader.add(getResources().getString(R.string.faq_q2));
+        listDataHeader.add(getResources().getString(R.string.faq_q3));
+        listDataHeader.add(getResources().getString(R.string.faq_q4));
+        listDataHeader.add(getResources().getString(R.string.faq_q5));
+        listDataHeader.add(getResources().getString(R.string.faq_q6));
+        listDataHeader.add(getResources().getString(R.string.faq_q7));
+        listDataHeader.add(getResources().getString(R.string.faq_q8));
+        listDataHeader.add(getResources().getString(R.string.faq_q9));
+        listDataHeader.add(getResources().getString(R.string.faq_q10));
 
 
         // Adding child data
         List<String> q1 = new ArrayList<>();
         q1.add(getResources().getString(R.string.faq_a1));
-
         List<String> q2 = new ArrayList<>();
         q2.add(getResources().getString(R.string.faq_a2));
+        List<String> q3 = new ArrayList<>();
+        q3.add(getResources().getString(R.string.faq_a3));
+        List<String> q4 = new ArrayList<>();
+        q4.add(getResources().getString(R.string.faq_a4));
+        List<String> q5 = new ArrayList<>();
+        q5.add(getResources().getString(R.string.faq_a5));
+        List<String> q6 = new ArrayList<>();
+        q6.add(getResources().getString(R.string.faq_a6));
+        List<String> q7 = new ArrayList<>();
+        q7.add(getResources().getString(R.string.faq_a7));
+        List<String> q8 = new ArrayList<>();
+        q8.add(getResources().getString(R.string.faq_a8));
+        List<String> q9 = new ArrayList<>();
+        q9.add(getResources().getString(R.string.faq_a9));
+        List<String> q10 = new ArrayList<>();
+        q10.add(getResources().getString(R.string.faq_a10));
 
         listDataChild.put(listDataHeader.get(0), q1); // Header, Child data
         listDataChild.put(listDataHeader.get(1), q2);
+        listDataChild.put(listDataHeader.get(2), q3);
+        listDataChild.put(listDataHeader.get(3), q4);
+        listDataChild.put(listDataHeader.get(4), q5);
+        listDataChild.put(listDataHeader.get(5), q6);
+        listDataChild.put(listDataHeader.get(6), q7);
+        listDataChild.put(listDataHeader.get(7), q8);
+        listDataChild.put(listDataHeader.get(8), q9);
+        listDataChild.put(listDataHeader.get(9), q10);
     }
 }
