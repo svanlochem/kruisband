@@ -1,7 +1,5 @@
 package com.kruisband.fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -71,7 +69,7 @@ public class YoutubeFragment extends Fragment {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
                 if (!wasRestored) {
-                    player.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
+                    player.setPlayerStyle(YouTubePlayer.PlayerStyle.MINIMAL);
                     //Load video
 //                    player.loadVideo(VIDEO_ID);   //Play immediately
                     player.cueVideo(VIDEO_ID);      //Load without starting it

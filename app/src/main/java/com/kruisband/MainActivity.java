@@ -1,8 +1,5 @@
 package com.kruisband;
 
-import android.content.Intent;
-import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
@@ -12,20 +9,18 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.kruisband.fragments.FaqFragment;
 import com.kruisband.fragments.HomeFragment;
 import com.kruisband.fragments.IllnessFragment;
 import com.kruisband.fragments.PostTreatmentFragment;
 import com.kruisband.fragments.TreatmentFragment;
 import com.kruisband.fragments.YoutubeFragment;
-
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
