@@ -72,7 +72,9 @@ public class YoutubeFragment extends Fragment {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
                 if (!wasRestored) {
                     player.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
-                    player.loadVideo(VIDEO_ID);
+                    //Load video
+//                    player.loadVideo(VIDEO_ID);   //Play immediately
+                    player.cueVideo(VIDEO_ID);      //Load without starting it
                     //Show fullscreen in landscape and prevent app being rotated to landscape and
                     player.addFullscreenControlFlag(player.FULLSCREEN_FLAG_CONTROL_ORIENTATION);
                     //Fullscreen automatically activate on rotation to landscape
