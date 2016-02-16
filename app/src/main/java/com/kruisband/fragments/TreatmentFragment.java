@@ -2,14 +2,11 @@ package com.kruisband.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 
-import com.google.android.youtube.player.YouTubeInitializationResult;
-import com.google.android.youtube.player.YouTubeThumbnailLoader;
-import com.google.android.youtube.player.YouTubeThumbnailView;
 import com.kruisband.R;
 
 public class TreatmentFragment extends Fragment {
@@ -46,8 +43,11 @@ public class TreatmentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_text
-                , container, false);
+        View rootView = inflater.inflate(R.layout.fragment_text, container, false);
+
+        //Display of text
+        WebView webView = (WebView) rootView.findViewById(R.id.webView_text);
+        webView.loadUrl(getResources().getString(R.string.ref_assets) + getResources().getString(R.string.ref_treatment));
 
         return rootView;
     }

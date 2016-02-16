@@ -96,6 +96,7 @@
     <string name="ref_illness_anatomy">illness_anatomy_nl.html</string>
     <string name="ref_illness_diagnosis">illness_diagnosis_nl.html</string>
     <string name="ref_illness_causes">illness_causes_nl.html</string>
+    <string name="ref_treatment">treatment_nl.html</string>
 
     <string name="treatment_intro">Behandeling tekst</string>
     <string name="post_treatment_intro">Nabehandeling tekst</string>
