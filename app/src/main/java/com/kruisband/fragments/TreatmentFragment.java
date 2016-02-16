@@ -12,18 +12,13 @@ import com.google.android.youtube.player.YouTubeThumbnailLoader;
 import com.google.android.youtube.player.YouTubeThumbnailView;
 import com.kruisband.R;
 
-public class TreatmentFragment extends Fragment implements YouTubeThumbnailView.OnInitializedListener {
+public class TreatmentFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     private String mParam1;
     private String mParam2;
-
-    private YouTubeThumbnailView youtubeThumbnailView;
-    private YouTubeThumbnailLoader youtubeThumbnailLoader;
-
-    View rootView;
 
     public TreatmentFragment() {
         // Required empty public constructor
@@ -51,56 +46,9 @@ public class TreatmentFragment extends Fragment implements YouTubeThumbnailView.
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        rootView = inflater.inflate(R.layout.fragment_treatment, container, false);
-
-        youtubeThumbnailView = (YouTubeThumbnailView) rootView.findViewById(R.id.thumbnailView);
-        youtubeThumbnailView.initialize(getResources().getString(R.string.API_KEY), this);
-
-        youtubeThumbnailView.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Log.d("TEST","CLICK!");
-//                if (youTubePlayer != null) {
-//                    youTubePlayer.cueVideo(VIDEO1_ID);
-//                    youTubePlayer.play();
-//                    mainScrollView.smoothScrollTo(0, 0);
-//                }
-            }
-        });
+        View rootView = inflater.inflate(R.layout.fragment_text
+                , container, false);
 
         return rootView;
-    }
-
-
-    @Override
-    public void onInitializationFailure(YouTubeThumbnailView thumbnailView,
-                                        YouTubeInitializationResult errorReason) {
-
-    }
-
-    @Override
-    public void onInitializationSuccess(YouTubeThumbnailView thumbnailView,
-                                        YouTubeThumbnailLoader thumbnailLoader) {
-
-        youtubeThumbnailLoader = thumbnailLoader;
-        thumbnailLoader.setOnThumbnailLoadedListener(new ThumbnailListener());
-
-        youtubeThumbnailLoader.setVideo(getResources().getString(R.string.VIDEO_ID));
-
-    }
-
-    private final class ThumbnailListener implements
-            YouTubeThumbnailLoader.OnThumbnailLoadedListener {
-
-        @Override
-        public void onThumbnailLoaded(YouTubeThumbnailView thumbnail, String videoId) {
-
-        }
-
-        @Override
-        public void onThumbnailError(YouTubeThumbnailView thumbnail, YouTubeThumbnailLoader.ErrorReason reason) {
-
-        }
     }
 }
