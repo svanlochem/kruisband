@@ -25,6 +25,7 @@ public class TreatmentFragment extends Fragment {
 
         //Display of text
         WebView webView = (WebView) rootView.findViewById(R.id.webView_text);
+        webView.getSettings().setJavaScriptEnabled(true); //Allow javascript for embedding youtube videos
         webView.loadUrl(getResources().getString(R.string.ref_assets) + getResources().getString(R.string.ref_treatment));
 
         return rootView;
