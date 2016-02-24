@@ -13,49 +13,26 @@ import android.view.ViewGroup;
 import com.kruisband.R;
 
 public class IllnessFragment extends Fragment {
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_TEXT1 = "text1";
-    private static final String ARG_TEXT2 = "text2";
-
-    private String mText1;
-    private String mText2;
-
-
-    public IllnessFragment() {
-        // Required empty public constructor
-    }
-
-    public static IllnessFragment newInstance(String param1, String param2) {
-        IllnessFragment fragment = new IllnessFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_TEXT1, param1);
-        args.putString(ARG_TEXT2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    View rootView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mText1 = getArguments().getString(ARG_TEXT1);
-            mText2 = getArguments().getString(ARG_TEXT2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View myInflatedView = inflater.inflate(R.layout.fragment_illness, container, false);
+        rootView= inflater.inflate(R.layout.fragment_illness, container, false);
 
-        TabLayout tabLayout = (TabLayout) myInflatedView.findViewById(R.id.tab_layout);
+        TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab_illness_anatomy)));
         tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab_illness_causes)));
         tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab_illness_symptoms)));
         tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab_illness_diagnosis)));
 
-        final ViewPager viewPager = (ViewPager) myInflatedView.findViewById(R.id.viewpager);
+        final ViewPager viewPager = (ViewPager) rootView.findViewById(R.id.viewpager);
 
         viewPager.setAdapter(new PagerAdapter
                 (getFragmentManager(), tabLayout.getTabCount()));
@@ -77,7 +54,7 @@ public class IllnessFragment extends Fragment {
             }
         });
 
-        return myInflatedView;
+        return rootView;
     }
 
     public class PagerAdapter extends FragmentStatePagerAdapter {

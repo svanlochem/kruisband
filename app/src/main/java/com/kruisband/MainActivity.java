@@ -14,7 +14,6 @@ import android.view.MenuItem;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.kruisband.fragments.FaqFragment;
 import com.kruisband.fragments.HomeFragment;
 import com.kruisband.fragments.IllnessFragment;

@@ -1,10 +1,8 @@
 package com.kruisband.fragments;
 
-import android.content.Context;
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,40 +11,17 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubeThumbnailLoader;
 import com.google.android.youtube.player.YouTubeThumbnailView;
 import com.kruisband.R;
+import com.kruisband.VideoActivity;
 
 public class PostTreatmentFragment extends Fragment implements YouTubeThumbnailView.OnInitializedListener {
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
+    View rootView;
 
     private YouTubeThumbnailView youtubeThumbnailView;
     private YouTubeThumbnailLoader youtubeThumbnailLoader;
 
-    View rootView;
-
-    public PostTreatmentFragment() {
-        // Required empty public constructor
-    }
-
-    public static PostTreatmentFragment newInstance(String param1, String param2) {
-        PostTreatmentFragment fragment = new PostTreatmentFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -62,7 +37,12 @@ public class PostTreatmentFragment extends Fragment implements YouTubeThumbnailV
 
             @Override
             public void onClick(View arg0) {
-                Log.d("TEST", "CLICK!");
+                //Start video in new activity
+                Intent myIntent = new Intent(getActivity(),VideoActivity.class);
+                String videoID = getResources().getString(R.string.VIDEO_ID);
+                myIntent.putExtra("VIDEO_ID",videoID);
+                startActivity(myIntent);
+
 //                if (youTubePlayer != null) {
 //                    youTubePlayer.cueVideo(VIDEO1_ID);
 //                    youTubePlayer.play();
