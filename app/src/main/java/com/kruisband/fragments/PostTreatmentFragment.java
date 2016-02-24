@@ -42,12 +42,6 @@ public class PostTreatmentFragment extends Fragment implements YouTubeThumbnailV
                 String videoID = getResources().getString(R.string.VIDEO_ID);
                 myIntent.putExtra("VIDEO_ID",videoID);
                 startActivity(myIntent);
-
-//                if (youTubePlayer != null) {
-//                    youTubePlayer.cueVideo(VIDEO1_ID);
-//                    youTubePlayer.play();
-//                    mainScrollView.smoothScrollTo(0, 0);
-//                }
             }
         });
 

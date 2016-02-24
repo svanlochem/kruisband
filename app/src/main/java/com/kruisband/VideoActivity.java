@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.kruisband.fragments.YoutubeFragment;
-
 public class VideoActivity extends AppCompatActivity {
     private static String VIDEO_ID;
 
