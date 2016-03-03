@@ -13,6 +13,7 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerSupportFragment;
 import com.kruisband.R;
+import com.kruisband.VideoActivity;
 
 public class YoutubeFragment extends Fragment {
      private View rootView;
@@ -32,8 +33,12 @@ public class YoutubeFragment extends Fragment {
         //Create rootview
         rootView = inflater.inflate(R.layout.fragment_youtube, container, false);
 
+        //TODO: Load text
+//        VideoActivity.TEXT_LOC
+
         //YOUTUBE
-        startVideo(getResources().getString(R.string.API_KEY),getResources().getString(R.string.VIDEO_ID));
+//        startVideo(getResources().getString(R.string.API_KEY),getResources().getString(R.string.VIDEO_ID));
+        startVideo(getResources().getString(R.string.API_KEY), VideoActivity.VIDEO_ID);
 
         // Inflate the layout for this fragment
         return rootView;

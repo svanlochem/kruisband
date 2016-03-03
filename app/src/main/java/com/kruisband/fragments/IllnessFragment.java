@@ -26,13 +26,13 @@ public class IllnessFragment extends Fragment {
         // Inflate the layout for this fragment
         rootView= inflater.inflate(R.layout.fragment_illness, container, false);
 
-        TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tab_layout);
+        TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tab_layout_illness);
         tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab_illness_anatomy)));
         tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab_illness_causes)));
         tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab_illness_symptoms)));
         tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab_illness_diagnosis)));
 
-        final ViewPager viewPager = (ViewPager) rootView.findViewById(R.id.viewpager);
+        final ViewPager viewPager = (ViewPager) rootView.findViewById(R.id.viewpager_illness);
 
         viewPager.setAdapter(new PagerAdapter
                 (getFragmentManager(), tabLayout.getTabCount()));

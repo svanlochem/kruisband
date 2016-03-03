@@ -39,7 +39,7 @@ public class PostTreatmentFragment extends Fragment implements YouTubeThumbnailV
             public void onClick(View arg0) {
                 //Start video in new activity
                 Intent myIntent = new Intent(getActivity(),VideoActivity.class);
-                String videoID = getResources().getString(R.string.VIDEO_ID);
+                String videoID = getResources().getString(R.string.VIDEO_ID1);
                 myIntent.putExtra("VIDEO_ID",videoID);
                 startActivity(myIntent);
             }
@@ -62,7 +62,7 @@ public class PostTreatmentFragment extends Fragment implements YouTubeThumbnailV
         youtubeThumbnailLoader = thumbnailLoader;
         thumbnailLoader.setOnThumbnailLoadedListener(new ThumbnailListener());
 
-        youtubeThumbnailLoader.setVideo(getResources().getString(R.string.VIDEO_ID));
+        youtubeThumbnailLoader.setVideo(getResources().getString(R.string.VIDEO_ID1));
 
     }
 

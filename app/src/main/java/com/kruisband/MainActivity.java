@@ -19,6 +19,7 @@ import com.kruisband.fragments.HomeFragment;
 import com.kruisband.fragments.IllnessFragment;
 import com.kruisband.fragments.PostTreatmentFragment;
 import com.kruisband.fragments.TreatmentFragment;
+import com.kruisband.fragments.VideoFragment;
 import com.kruisband.fragments.YoutubeFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -114,6 +115,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_faq:
                 fragment = new FaqFragment();
                 title  = getString(R.string.nav_faq);
+                break;
+            case R.id.nav_videos:
+                fragment = new VideoFragment();
+                title  = getString(R.string.nav_videos);
                 break;
             case R.id.nav_share:
                 fragment = new YoutubeFragment();
