@@ -9,7 +9,7 @@
         android:id="@+id/lblListHeader"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="17dp"
+        android:textSize="17sp"
         android:textColor="@android:color/black"/>
 
     <!--android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"-->

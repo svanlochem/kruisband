@@ -9,7 +9,6 @@
     <string name="nav_faq">Veel Gestelde Vragen</string>
 
     <string name="nav_videos">Filmpjes</string>
-    <string name="nav_share">Delen</string>
     <string name="nav_about">About</string>
 
     <!--Other-->
@@ -19,6 +18,7 @@
     <string name="action_settings">Instellingen</string>
     <string name="mobilisation">Mobilisatie</string>
     <string name="force">Kracht</string>
+    <string name="hip_abduction">HEUP ABDUCTIE</string>
 
     <!--Tabs-->
     <string name="tab_illness_anatomy"><![CDATA[Anatomie & Functie]]></string>
@@ -32,10 +32,6 @@
     <string name="tab_treatment_operation_hamsting">Operatie Hamstring</string>
 
     <!--Body text-->
-    <string name="illness_intro">
-        Dit stuk text is de introductie van de aandoeningspagina. Hier komt een hoop text met plaatjes te staan.
-    </string>
-
     <string name="faq_q1">Is het nodig een MRI scan te laten maken om de diagnose van een gescheurde voorste kruisband te stellen?</string>
     <string name="faq_a1">
         <![CDATA[
@@ -107,7 +103,7 @@
     <string name="ref_illness_causes">illness_causes_nl.html</string>
     <string name="ref_treatment_home">treatment_home_nl.html</string>
     <string name="ref_treatment_conservative">treatment_conservative_nl.html</string>
-    <string name="ref_treatment_operation">treatment_operation_nl.html</string>
+    <!--<string name="ref_treatment_operation">treatment_operation_nl.html</string>-->
     <string name="ref_treatment_patella">treatment_patella_nl.html</string>
     <string name="ref_treatment_hamstring">treatment_hamstring_nl.html</string>
     <string name="ref_leg_extension">leg_extension_nl.html</string>
@@ -116,14 +112,10 @@
     <string name="ref_knee_extension">knee_extension_nl.html</string>
     <string name="ref_hip_abduction">hip_abduction_nl.html</string>
 
-    <string name="treatment_intro">Behandeling tekst</string>
-    <string name="post_treatment_intro">Nabehandeling tekst</string>
-    <string name="faq_intro">Veel gestelde vragen tekst</string>
-
     <!--Youtube-->
-    <string name="player_error">Error initializing YouTube player</string>
-    <string name="seek_to">Jump To</string>
-    <string name="seek_to_hint">Seconds</string>
+    <!--<string name="player_error">Error initializing YouTube player</string>-->
+    <!--<string name="seek_to">Jump To</string>-->
+    <!--<string name="seek_to_hint">Seconds</string>-->
     <string name="API_KEY">AIzaSyD5HqGMVCERMXiJH6ujQPsuj9LyDn2tqrE</string>
     <string name="VIDEO_ID_legExtension">26rL68qsTQY</string>
     <string name="VIDEO_ID_anklePumps">6sc1Pfz69FQ</string>

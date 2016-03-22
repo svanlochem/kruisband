@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import com.kruisband.R;
 
 public class TreatmentFragment extends Fragment {
-    View rootView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,7 +23,7 @@ public class TreatmentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        rootView= inflater.inflate(R.layout.fragment_treatment, container, false);
+        View rootView= inflater.inflate(R.layout.fragment_treatment, container, false);
 
         TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tab_layout_treatment);
         tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab_treatment_home)));
@@ -58,7 +57,7 @@ public class TreatmentFragment extends Fragment {
     }
 
     public class PagerAdapter extends FragmentStatePagerAdapter {
-        int mNumOfTabs;
+        final int mNumOfTabs;
 
         public PagerAdapter(FragmentManager fm, int NumOfTabs) {
             super(fm);

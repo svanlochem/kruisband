@@ -12,10 +12,9 @@ import com.kruisband.R;
 import com.kruisband.VideoActivity;
 
 public class VideoFragment extends Fragment {
-    View rootview;
 
-    private ImageView[] images_mobilisation = new ImageView[2];
-    private ImageView[] images_force = new ImageView[3];
+    private final ImageView[] images_mobilisation = new ImageView[2];
+    private final ImageView[] images_force = new ImageView[3];
 
     public VideoFragment() {
         // Required empty public constructor
@@ -26,14 +25,14 @@ public class VideoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        rootview = inflater.inflate(R.layout.fragment_video, container, false);
+        View rootview = inflater.inflate(R.layout.fragment_video, container, false);
 
         //Mobilisation Scrollview images
         images_mobilisation[0] = (ImageView) rootview.findViewById(R.id.imageview1_1);
         images_mobilisation[1] = (ImageView) rootview.findViewById(R.id.imageview1_2);
 
-        for (int i = 0; i < images_mobilisation.length; i++) {
-            images_mobilisation[i].setOnClickListener(mOnClickListener);
+        for (ImageView anImages_mobilisation : images_mobilisation) {
+            anImages_mobilisation.setOnClickListener(mOnClickListener);
         }
 
         //Force Scrollview images
@@ -41,8 +40,8 @@ public class VideoFragment extends Fragment {
         images_force[1] = (ImageView) rootview.findViewById(R.id.imageview2_2);
         images_force[2] = (ImageView) rootview.findViewById(R.id.imageview2_3);
 
-        for (int i = 0; i < images_force.length; i++) {
-            images_force[i].setOnClickListener(mOnClickListener);
+        for (ImageView anImages_force : images_force) {
+            anImages_force.setOnClickListener(mOnClickListener);
         }
 
         return rootview;

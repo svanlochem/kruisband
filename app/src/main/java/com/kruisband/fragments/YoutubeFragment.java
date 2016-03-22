@@ -17,7 +17,6 @@ import com.kruisband.R;
 import com.kruisband.VideoActivity;
 
 public class YoutubeFragment extends Fragment {
-     private View rootView;
 
     public YoutubeFragment() {
         // Required empty public constructor
@@ -32,7 +31,7 @@ public class YoutubeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         //Create rootview
-        rootView = inflater.inflate(R.layout.fragment_youtube, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_youtube, container, false);
 
         //Load text
         WebView webView = (WebView) rootView.findViewById(R.id.youtube_web_view);
@@ -61,7 +60,7 @@ public class YoutubeFragment extends Fragment {
                     player.loadVideo(VIDEO_ID);   //Play immediately
 //                    player.cueVideo(VIDEO_ID);      //Load without starting it
                     //Show fullscreen in landscape and prevent app being rotated to landscape and
-                    player.addFullscreenControlFlag(player.FULLSCREEN_FLAG_CONTROL_ORIENTATION);
+                    player.addFullscreenControlFlag(YouTubePlayer.FULLSCREEN_FLAG_CONTROL_ORIENTATION);
                     //Fullscreen automatically activate on rotation to landscape
 //                    player.addFullscreenControlFlag(player.FULLSCREEN_FLAG_ALWAYS_FULLSCREEN_IN_LANDSCAPE);
                     player.play();

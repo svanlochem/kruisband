@@ -10,7 +10,6 @@ import android.webkit.WebView;
 import com.kruisband.R;
 
 public class IllnessAnatomyFragment extends Fragment {
-    View rootView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -20,7 +19,7 @@ public class IllnessAnatomyFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_text, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_text, container, false);
 
         //Display of text
         WebView webView = (WebView) rootView.findViewById(R.id.webView_text);

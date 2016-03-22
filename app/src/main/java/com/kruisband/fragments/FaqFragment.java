@@ -16,12 +16,10 @@ import java.util.HashMap;
 import java.util.List;
 
 public class FaqFragment extends Fragment {
-    View rootView;
+    private View rootView;
 
-    ExpandableListAdapter listAdapter;
-    ExpandableListView expListView;
-    List<String> listDataHeader;
-    HashMap<String, List<String>> listDataChild;
+    private List<String> listDataHeader;
+    private HashMap<String, List<String>> listDataChild;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,12 +32,12 @@ public class FaqFragment extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_faq, container, false);
 
         // get the listview
-        expListView = (ExpandableListView) rootView.findViewById(R.id.expListView);
+        ExpandableListView expListView = (ExpandableListView) rootView.findViewById(R.id.expListView);
 
 //      Tutorial ExpandableListView  http://www.androidhive.info/2013/07/android-expandable-list-view-tutorial/
         // preparing list data
         prepareListData();
-        listAdapter = new ExpandableListAdapter(getContext(), listDataHeader, listDataChild);
+        ExpandableListAdapter listAdapter = new ExpandableListAdapter(getContext(), listDataHeader, listDataChild);
         // setting list adapter
         expListView.setAdapter(listAdapter);
         // Listview Group click listener

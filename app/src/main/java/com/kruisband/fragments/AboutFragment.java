@@ -12,7 +12,6 @@ import com.kruisband.MainActivity;
 import com.kruisband.R;
 
 public class AboutFragment extends Fragment {
-    View rootView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -23,7 +22,7 @@ public class AboutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        rootView = inflater.inflate(R.layout.fragment_text, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_text, container, false);
 
         //Display of text
         WebView webView = (WebView) rootView.findViewById(R.id.webView_text);
