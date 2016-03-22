@@ -14,7 +14,8 @@ import com.kruisband.VideoActivity;
 public class VideoFragment extends Fragment {
     View rootview;
 
-    private ImageView[] images = new ImageView[2];
+    private ImageView[] images_mobilisation = new ImageView[2];
+    private ImageView[] images_force = new ImageView[3];
 
     public VideoFragment() {
         // Required empty public constructor
@@ -27,11 +28,21 @@ public class VideoFragment extends Fragment {
         // Inflate the layout for this fragment
         rootview = inflater.inflate(R.layout.fragment_video, container, false);
 
-        images[0] = (ImageView) rootview.findViewById(R.id.imageview1);
-        images[1] = (ImageView) rootview.findViewById(R.id.imageview2);
+        //Mobilisation Scrollview images
+        images_mobilisation[0] = (ImageView) rootview.findViewById(R.id.imageview1_1);
+        images_mobilisation[1] = (ImageView) rootview.findViewById(R.id.imageview1_2);
 
-        for (int i = 0; i < images.length; i++) {
-            images[i].setOnClickListener(mOnClickListener);
+        for (int i = 0; i < images_mobilisation.length; i++) {
+            images_mobilisation[i].setOnClickListener(mOnClickListener);
+        }
+
+        //Force Scrollview images
+        images_force[0] = (ImageView) rootview.findViewById(R.id.imageview2_1);
+        images_force[1] = (ImageView) rootview.findViewById(R.id.imageview2_2);
+        images_force[2] = (ImageView) rootview.findViewById(R.id.imageview2_3);
+
+        for (int i = 0; i < images_force.length; i++) {
+            images_force[i].setOnClickListener(mOnClickListener);
         }
 
         return rootview;
@@ -41,10 +52,18 @@ public class VideoFragment extends Fragment {
 
         @Override
         public void onClick(View v) {
-            if(v==images[0]){
-                startMovie(getResources().getString(R.string.VIDEO_ID1),"TEST");
-            } else if(v==images[1]){
-                startMovie(getResources().getString(R.string.VIDEO_ID2),"TEST");
+            if(v==images_mobilisation[0]){//Leg Extension
+                startMovie(getResources().getString(R.string.VIDEO_ID_legExtension),getResources().getString(R.string.ref_leg_extension));
+            } else if(v==images_mobilisation[1]){//Ankle Pumps
+                startMovie(getResources().getString(R.string.VIDEO_ID_anklePumps),getResources().getString(R.string.ref_ankle_pumps));
+            }
+
+            else if(v==images_force[0]){//Straight Leg Raise
+                startMovie(getResources().getString(R.string.VIDEO_ID_straightLegRaise),getResources().getString(R.string.ref_straight_leg_raise));
+            } else if(v==images_force[1]) {//Knee Extension
+                startMovie(getResources().getString(R.string.VIDEO_ID_kneeExtension),getResources().getString(R.string.ref_knee_extension));
+            } else if(v==images_force[2]) {//Hip Abduction
+                startMovie(getResources().getString(R.string.VIDEO_ID_hipAbduction),getResources().getString(R.string.ref_hip_abduction));
             }
         }
     };

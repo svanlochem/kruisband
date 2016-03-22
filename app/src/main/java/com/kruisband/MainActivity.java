@@ -9,11 +9,13 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.kruisband.fragments.AboutFragment;
 import com.kruisband.fragments.FaqFragment;
 import com.kruisband.fragments.HomeFragment;
 import com.kruisband.fragments.IllnessFragment;
@@ -120,9 +122,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragment = new VideoFragment();
                 title  = getString(R.string.nav_videos);
                 break;
-            case R.id.nav_share:
-                fragment = new YoutubeFragment();
-                title = getString(R.string.nav_share);
+            case R.id.nav_about:
+                fragment = new AboutFragment();
+                title  = getString(R.string.nav_about);
                 break;
         }
 
@@ -139,5 +141,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+    }
+
+    //Method to switch to video fragment (to be used externally by fragments)
+    public void goToVideos(){
+        displayView(R.id.nav_videos);
     }
 }

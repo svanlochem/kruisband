@@ -17,6 +17,8 @@
     <string name="navigation_drawer_close">Sluit navigatie paneel</string>
     <string name="navtitle_other">Overig</string>
     <string name="action_settings">Instellingen</string>
+    <string name="mobilisation">Mobilisatie</string>
+    <string name="force">Kracht</string>
 
     <!--Tabs-->
     <string name="tab_illness_anatomy"><![CDATA[Anatomie & Functie]]></string>
@@ -98,6 +100,7 @@
     <!--HTML REFRENCES-->
     <string name="ref_assets">file:///android_asset/</string>
     <string name="ref_introduction">introduction_nl.html</string>
+    <string name="ref_about">about_nl.html</string>
     <string name="ref_illness_symptoms">illness_symptoms_nl.html</string>
     <string name="ref_illness_anatomy">illness_anatomy_nl.html</string>
     <string name="ref_illness_diagnosis">illness_diagnosis_nl.html</string>
@@ -107,6 +110,11 @@
     <string name="ref_treatment_operation">treatment_operation_nl.html</string>
     <string name="ref_treatment_patella">treatment_patella_nl.html</string>
     <string name="ref_treatment_hamstring">treatment_hamstring_nl.html</string>
+    <string name="ref_leg_extension">leg_extension_nl.html</string>
+    <string name="ref_ankle_pumps">ankle_pumps_nl.html</string>
+    <string name="ref_straight_leg_raise">straight_leg_raise_nl.html</string>
+    <string name="ref_knee_extension">knee_extension_nl.html</string>
+    <string name="ref_hip_abduction">hip_abduction_nl.html</string>
 
     <string name="treatment_intro">Behandeling tekst</string>
     <string name="post_treatment_intro">Nabehandeling tekst</string>
@@ -117,8 +125,11 @@
     <string name="seek_to">Jump To</string>
     <string name="seek_to_hint">Seconds</string>
     <string name="API_KEY">AIzaSyD5HqGMVCERMXiJH6ujQPsuj9LyDn2tqrE</string>
-    <string name="VIDEO_ID1">HEeRZ_OE3mk</string> <!--John Mayer-->
-    <string name="VIDEO_ID2">IjcO43lE_MQ</string> <!--Jiskefet-->
+    <string name="VIDEO_ID_legExtension">26rL68qsTQY</string>
+    <string name="VIDEO_ID_anklePumps">6sc1Pfz69FQ</string>
+    <string name="VIDEO_ID_straightLegRaise">sXKdCnHMf4c</string>
+    <string name="VIDEO_ID_kneeExtension">VyzYQ3BfhhY</string>
+    <string name="VIDEO_ID_hipAbduction">_VF5Qa9aYhA</string>
 
     <!--Ads-->
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>

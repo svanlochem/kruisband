@@ -34,10 +34,10 @@
                 android:icon="@drawable/ic_menu_slideshow"
                 android:title="@string/nav_videos"
                 />
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/nav_share" />
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="@string/nav_share" />-->
             <item
                 android:id="@+id/nav_about"
                 android:icon="@drawable/ic_info_outline"

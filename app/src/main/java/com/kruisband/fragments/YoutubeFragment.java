@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -33,8 +34,9 @@ public class YoutubeFragment extends Fragment {
         //Create rootview
         rootView = inflater.inflate(R.layout.fragment_youtube, container, false);
 
-        //TODO: Load text
-//        VideoActivity.TEXT_LOC
+        //Load text
+        WebView webView = (WebView) rootView.findViewById(R.id.youtube_web_view);
+        webView.loadUrl(getResources().getString(R.string.ref_assets) + VideoActivity.TEXT_LOC);
 
         //YOUTUBE
 //        startVideo(getResources().getString(R.string.API_KEY),getResources().getString(R.string.VIDEO_ID));
@@ -56,8 +58,8 @@ public class YoutubeFragment extends Fragment {
                 if (!wasRestored) {
                     player.setPlayerStyle(YouTubePlayer.PlayerStyle.MINIMAL);
                     //Load video
-//                    player.loadVideo(VIDEO_ID);   //Play immediately
-                    player.cueVideo(VIDEO_ID);      //Load without starting it
+                    player.loadVideo(VIDEO_ID);   //Play immediately
+//                    player.cueVideo(VIDEO_ID);      //Load without starting it
                     //Show fullscreen in landscape and prevent app being rotated to landscape and
                     player.addFullscreenControlFlag(player.FULLSCREEN_FLAG_CONTROL_ORIENTATION);
                     //Fullscreen automatically activate on rotation to landscape

@@ -11,7 +11,7 @@ import android.webkit.WebViewClient;
 import com.kruisband.MainActivity;
 import com.kruisband.R;
 
-public class HomeFragment extends Fragment {
+public class AboutFragment extends Fragment {
     View rootView;
 
     @Override
@@ -27,7 +27,7 @@ public class HomeFragment extends Fragment {
 
         //Display of text
         WebView webView = (WebView) rootView.findViewById(R.id.webView_text);
-        webView.loadUrl(getResources().getString(R.string.ref_assets) + getResources().getString(R.string.ref_introduction));
+        webView.loadUrl(getResources().getString(R.string.ref_assets) + getResources().getString(R.string.ref_about));
 
         webView.setWebViewClient(new WebViewClient() {
             @Override
