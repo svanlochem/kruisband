@@ -6,22 +6,14 @@
 
     <TextView
         android:id="@+id/textView1"
+        style="@style/headingText"
         android:text="@string/mobilisation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_margin="2dp"
         android:layout_alignParentTop="true"/>
 
     <HorizontalScrollView
         android:id="@+id/hsv1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView1"
-        android:fillViewport="true"
-        android:measureAllChildren="false"
-        android:scrollbars="horizontal"
-        android:fadeScrollbars="false">
+        style="@style/horizontalScroll"
+        android:layout_below="@id/textView1">
 
         <LinearLayout
             android:id="@+id/first_gallery"
@@ -31,42 +23,26 @@
 
             <ImageView
                 android:id="@+id/imageview1_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/leg_extension_scr"
-                android:clickable="true"
-                android:layout_margin="2dp"
-                />
+                style="@style/videoScreenImageView"
+                android:src="@drawable/leg_extension_scr"/>
 
             <ImageView
                 android:id="@+id/imageview1_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ankle_pumps_scr"
-                android:clickable="true"
-                android:layout_margin="2dp"
-                />
+                style="@style/videoScreenImageView"
+                android:src="@drawable/ankle_pumps_scr"/>
         </LinearLayout>
     </HorizontalScrollView>
 
     <TextView
         android:id="@+id/textView2"
+        style="@style/headingText"
         android:text="@string/force"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_margin="2dp"
         android:layout_below="@id/hsv1"/>
 
     <HorizontalScrollView
         android:id="@+id/hsv2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView2"
-        android:fillViewport="true"
-        android:measureAllChildren="false"
-        android:scrollbars="horizontal"
-        android:fadeScrollbars="false">
+        style="@style/horizontalScroll"
+        android:layout_below="@id/textView2">
 
         <LinearLayout
             android:id="@+id/second_gallery"
@@ -76,21 +52,13 @@
 
             <ImageView
                 android:id="@+id/imageview2_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/straight_leg_raise_scr"
-                android:clickable="true"
-                android:layout_margin="2dp"
-                />
+                style="@style/videoScreenImageView"
+                android:src="@drawable/straight_leg_raise_scr"/>
 
             <ImageView
                 android:id="@+id/imageview2_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/knee_extension_scr"
-                android:clickable="true"
-                android:layout_margin="2dp"
-                />
+                style="@style/videoScreenImageView"
+                android:src="@drawable/knee_extension_scr"/>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -98,20 +66,12 @@
                 android:layout_margin="2dp">
                 <ImageView
                     android:id="@+id/imageview2_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/heup_abductie_scr"
-                    android:clickable="true"/>
+                    style="@style/videoScreenImageView"
+                    android:src="@drawable/heup_abductie_scr"/>
                 <TextView
                     android:id="@+id/textview2_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:textSize="20sp"
-                    android:typeface="sans"
-                    android:text="@string/hip_abduction"
-                    android:textColor="@android:color/white"
-                    />
+                    style="@style/videoScreenTextView"
+                    android:text="@string/hip_abduction"/>
             </RelativeLayout>
 
         </LinearLayout>
