@@ -21,15 +21,31 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imageview1_1"
-                style="@style/videoScreenImageView"
-                android:src="@drawable/leg_extension_scr"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageview1_1"
+                    style="@style/videoScreenImageView"
+                    android:src="@drawable/leg_extension_scr"/>
+                <TextView
+                    android:id="@+id/textview1_1"
+                    style="@style/videoScreenTextView"
+                    android:text="@string/leg_extension"/>
+            </RelativeLayout>
 
-            <ImageView
-                android:id="@+id/imageview1_2"
-                style="@style/videoScreenImageView"
-                android:src="@drawable/ankle_pumps_scr"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageview1_2"
+                    style="@style/videoScreenImageView"
+                    android:src="@drawable/ankle_pumps_scr"/>
+                <TextView
+                    android:id="@+id/textview1_2"
+                    style="@style/videoScreenTextView"
+                    android:text="@string/ankle_pumps"/>
+            </RelativeLayout>
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -50,15 +66,31 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imageview2_2"
-                style="@style/videoScreenImageView"
-                android:src="@drawable/knee_extension_scr"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageview2_2"
+                    style="@style/videoScreenImageView"
+                    android:src="@drawable/knee_extension_scr"/>
+                <TextView
+                    android:id="@+id/textview2_2"
+                    style="@style/videoScreenTextView"
+                    android:text="@string/knee_extension"/>
+            </RelativeLayout>
 
-            <ImageView
-                android:id="@+id/imageview2_1"
-                style="@style/videoScreenImageView"
-                android:src="@drawable/straight_leg_raise_scr"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageview2_1"
+                    style="@style/videoScreenImageView"
+                    android:src="@drawable/straight_leg_raise_scr"/>
+                <TextView
+                    android:id="@+id/textview2_1"
+                    style="@style/videoScreenTextView"
+                    android:text="@string/straight_leg_raise"/>
+            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="wrap_content"

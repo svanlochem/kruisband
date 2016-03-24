@@ -18,7 +18,11 @@
     <string name="action_settings">Instellingen</string>
     <string name="mobilisation">Mobilisatie</string>
     <string name="force">Kracht</string>
-    <string name="hip_abduction">HEUP ABDUCTIE</string>
+    <string name="hip_abduction">\'HEUP ABDUCTIE\'</string>
+    <string name="straight_leg_raise">\'STRAIGHT LEG RAISE\'</string>
+    <string name="knee_extension">\'KNIE EXTENSIE\'</string>
+    <string name="leg_extension">\'LEG EXTENSION\'</string>
+    <string name="ankle_pumps">\'ANKLE PUMPS\'</string>
 
     <!--Tabs-->
     <string name="tab_illness_anatomy"><![CDATA[Anatomie & Functie]]></string>
